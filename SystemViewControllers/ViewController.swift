@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
     
@@ -20,7 +21,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func safariButtonTapped(_ sender: Any) {
+        if let url = URL(string: "http://www.apple.com"){
+            let safariViewController = SFSafariViewController(url: url)
+            present(safariViewController, animated: true, completion: nil)
+        }
     }
+    
     @IBAction func cameraButtonTapped(_ sender: Any) {
     }
     @IBAction func emailButtonTapped(_ sender: Any) {
