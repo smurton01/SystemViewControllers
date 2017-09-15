@@ -11,8 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBAction func shareButtonTapped(_ sender: Any) {
+    @IBAction func shareButtonTapped(_ sender: UIButton) {
+        guard let image = imageView.image else { return }
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityController.popoverPresentationController?.sourceView = sender
+        
+        present(activityController, animated: true, completion: nil)
     }
+    
     @IBAction func safariButtonTapped(_ sender: Any) {
     }
     @IBAction func cameraButtonTapped(_ sender: Any) {
