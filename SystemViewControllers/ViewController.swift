@@ -9,6 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBAction func shareButtonTapped(_ sender: Any) {
+    }
+    @IBAction func safariButtonTapped(_ sender: Any) {
+    }
+    @IBAction func cameraButtonTapped(_ sender: Any) {
+    }
+    @IBAction func emailButtonTapped(_ sender: Any) {
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
