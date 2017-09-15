@@ -22,35 +22,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-EG-NO7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fm8-EG-NO7">
                                 <rect key="frame" x="16" y="28" width="343" height="343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-Or-pVm">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kuc-Or-pVm">
                                 <rect key="frame" x="16" y="379" width="343" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9N-jJ-bSs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9N-jJ-bSs">
                                         <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
                                         <state key="normal" title="Share"/>
                                         <connections>
                                             <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMo-SD-FNt"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gd-C9-yMf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gd-C9-yMf">
                                         <rect key="frame" x="86" y="0.0" width="85.5" height="30"/>
                                         <state key="normal" title="Safari"/>
                                         <connections>
                                             <action selector="safariButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g4k-I0-QDZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XM-Dv-T6e">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XM-Dv-T6e">
                                         <rect key="frame" x="171.5" y="0.0" width="86" height="30"/>
                                         <state key="normal" title="Camera"/>
                                         <connections>
                                             <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MS7-jp-A0y"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAs-LI-ppE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAs-LI-ppE">
                                         <rect key="frame" x="257.5" y="0.0" width="85.5" height="30"/>
                                         <state key="normal" title="Email"/>
                                         <connections>
@@ -63,7 +62,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kuc-Or-pVm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EmC-As-hFM"/>
+                            <constraint firstItem="fm8-EG-NO7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="IES-0g-NG1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kuc-Or-pVm" secondAttribute="bottom" constant="258" id="Ju8-ZV-yPF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kuc-Or-pVm" secondAttribute="trailing" id="NWb-yI-Upf"/>
+                            <constraint firstItem="fm8-EG-NO7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VEJ-9b-9g6"/>
+                            <constraint firstItem="kuc-Or-pVm" firstAttribute="top" secondItem="fm8-EG-NO7" secondAttribute="bottom" constant="8" id="Z5e-IO-p73"/>
+                            <constraint firstItem="fm8-EG-NO7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eVp-CG-6Qd"/>
+                            <constraint firstItem="kuc-Or-pVm" firstAttribute="top" secondItem="fm8-EG-NO7" secondAttribute="bottom" constant="8" id="iNa-63-Nbl"/>
                         </constraints>
                     </view>
                     <connections>
