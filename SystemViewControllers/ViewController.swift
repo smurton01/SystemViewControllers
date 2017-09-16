@@ -31,7 +31,18 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: {
+            action in print("User selected Camera action")
+        })
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: {
+            action in print("User selected Photo Library action")
+        })
+        
         alertController.addAction(cancelAction)
+        alertController.addAction(cameraAction)
+        alertController.addAction(photoLibraryAction)
         alertController.popoverPresentationController?.sourceView = sender
     
         present(alertController, animated: true, completion: nil)
