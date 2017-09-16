@@ -20,15 +20,23 @@ class ViewController: UIViewController {
         present(activityController, animated: true, completion: nil)
     }
     
-    @IBAction func safariButtonTapped(_ sender: Any) {
+    @IBAction func safariButtonTapped(_ sender: UIButton) {
         if let url = URL(string: "http://www.apple.com"){
             let safariViewController = SFSafariViewController(url: url)
             present(safariViewController, animated: true, completion: nil)
         }
     }
     
-    @IBAction func cameraButtonTapped(_ sender: Any) {
+    @IBAction func cameraButtonTapped(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.popoverPresentationController?.sourceView = sender
+    
+        present(alertController, animated: true, completion: nil)
     }
+    
     @IBAction func emailButtonTapped(_ sender: Any) {
     }
 
