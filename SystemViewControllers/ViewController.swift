@@ -8,12 +8,35 @@
 
 import UIKit
 import SafariServices
+import MessageUI
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBAction func emailButtonTapped(_ sender: Any) {
+    @IBAction func emailButtonTapped(_ sender: UIButton) {
+        
+        if !MFMailComposeViewController.canSendMail() {
+            print("Can not send mail")
+            return
+        }
+        
+        guard MFMailComposeViewController.canSendMail() else { return }
+        
+        let mailComposer = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate = self
+        
+        mailComposer.setToRecipients(["example@example.com"])
+        mailComposer.setSubject("Look at this")
+        mailComposer.setMessageBody("Hello, this is an email from the app I made.", isHTML: false)
+    
+        present(mailComposer, animated: true, completion: nil)
+        
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            dismiss(animated: true, completion: nil)
+        }
+
     }
+   
     @IBAction func shareButtonTapped(_ sender: UIButton) {
         guard let image = imageView.image else { return }
         let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
