@@ -30,11 +30,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         mailComposer.setMessageBody("Hello, this is an email from the app I made.", isHTML: false)
     
         present(mailComposer, animated: true, completion: nil)
-        
-        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-            dismiss(animated: true, completion: nil)
-        }
 
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
     }
    
     @IBAction func shareButtonTapped(_ sender: UIButton) {
